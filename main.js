@@ -17,14 +17,16 @@ function appendData(data) {
         div.addEventListener('click', (event) => allPosts(data[i].id, event));
         div.setAttribute("class", "card border-0 shadow-sm");
         div.innerHTML +=  `
-            <div class="card border-0 shadow-sm">
+            <div class="card border-0 shadow-sm py-3 m-0">
                 <div class="card-body py-3">
                     <div class="d-flex justify-content-between align-item-center">
                         <div>
                             <h6 class="m-0">${data[i].name}</h6>
                             <p class="m-0"><small>${data[i].email}</small></p>
                         </div>
-                        <button class="btn">GET POST</button>
+                        <div>
+                            <button class="btn">GET POST</button>
+                        </div>
                     </div>
                 </div>     
             </div>
@@ -58,7 +60,7 @@ function renderPosts(posts, target) {
     const div = document.createElement("div");
     div.innerHTML += `
         <div class="m-0 py-3">
-            <a class="btn" href="javascript:window.location.href=window.location.href">Back</a>
+            <button class="btn"><a href="javascript:window.location.href=window.location.href">Back</a></button>
         </div>
         `;
     const div2 = document.createElement("div2");
