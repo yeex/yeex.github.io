@@ -26,8 +26,6 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
 }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
@@ -43,6 +41,7 @@
 .py-3 {
     padding: 1rem .5rem;
 }
+<<<<<<< Updated upstream
 a:link {
     text-decoration: none;
 }
@@ -56,6 +55,26 @@ a:link {
     padding: 5px;
     width: 200px;
     transition: all 0.5s;
+=======
+.btn:hover {
+    letter-spacing: 0.8em;
+    background-color: #d35400;
+}
+
+.btn {
+    color: white;
+}
+button, a {
+    width: 100%;
+    padding: 1.5em auto;
+    margin: 1em auto;
+    background-color: #d35400;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    transition: all 0.2s cubic-bezier(.4,0,.2,1)
+>>>>>>> Stashed changes
 }
 @media (min-width: 576px) {
     .container, .container-sm {
