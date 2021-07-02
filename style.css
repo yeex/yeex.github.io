@@ -1,0 +1,81 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.d-flex { 
+    display: flex; 
+    width: 100%
+}
+.justify-content-between { 
+    justify-content: space-between;
+}
+.align-item-center { 
+    align-items: center
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 0rem 1.25rem;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.m-0 {
+    margin: .25rem;
+}
+.py-3 {
+    padding: 1rem .5rem;
+}
+.btn {
+    text-align: center;
+    cursor: pointer;
+    font-size:24px;
+    margin: 0 0 0 5px;
+    border-radius: 4px;
+    background-color:#d35400;
+    border: none;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+}
+@media (min-width: 576px) {
+    .container, .container-sm {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+        max-width: 720px;
+    }
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 48%;
+    }
+}
+@media (min-width: 992px) {
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 960px;
+    }
+    .col-lg-4 {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+}
+
