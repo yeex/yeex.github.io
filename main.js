@@ -17,17 +17,17 @@ function appendData(data) {
         div.addEventListener('click', (event) => allPosts(data[i].id, event));
         div.setAttribute("class", "card border-0 shadow-sm");
         div.innerHTML +=  `
-        <div class="card border-0 shadow-sm">
-            <div class="card-body py-3">
-                <div class="d-flex justify-content-between align-item-center">
-                    <div>
-                        <h6 class="m-0">${data[i].name}</h6>
-                        <p class="m-0"><small>${data[i].email}</small></p>
+            <div class="card border-0 shadow-sm">
+                <div class="card-body py-3">
+                    <div class="d-flex justify-content-between align-item-center">
+                        <div>
+                            <h6 class="m-0">${data[i].name}</h6>
+                            <p class="m-0"><small>${data[i].email}</small></p>
+                        </div>
+                        <button class="btn">GET POST</button>
                     </div>
-                    <button class="btn">GET POST</button>
-                </div>
-            </div>     
-        </div>
+                </div>     
+            </div>
             `;
         mainContainer.appendChild(div);
     }
@@ -56,13 +56,26 @@ function renderPosts(posts, target) {
     const body = document.getElementById("index"); 
     body.innerHTML = '';
     const div = document.createElement("div");
+    div.innerHTML += `
+        <div class="m-0 py-3">
+            <a class="btn" href="javascript:window.location.href=window.location.href">Back</a>
+        </div>
+        `;
     const div2 = document.createElement("div2");
     for(let i = 0; i < posts.length; i++) {
         console.log(posts[i]);
         div2.innerHTML += `
-        <a href="javascript:window.location.href=window.location.href">Back</a>
-        <span><strong>${posts[i].title}</strong></span>
-        <p>${posts[i].body}</p>`;
+            <div class="card border-0 shadow-sm">
+                <div class="card-body py-3">
+                    <div class="d-flex justify-content-between align-item-center">
+                        <div>
+                            <h6 class="m-0"><b>${posts[i].title}</b></h6>
+                            <p class="m-0">${posts[i].body}</p>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+            `;
         div.appendChild(div2);
     }
     body.appendChild(div);
