@@ -43,15 +43,17 @@
 .py-3 {
     padding: 1rem .5rem;
 }
+a:link {
+    text-decoration: none;
+}
 .btn {
     text-align: center;
     cursor: pointer;
     font-size:24px;
-    margin: 0 0 0 5px;
     border-radius: 4px;
     background-color:#d35400;
     border: none;
-    padding: 20px;
+    padding: 5px;
     width: 200px;
     transition: all 0.5s;
 }
